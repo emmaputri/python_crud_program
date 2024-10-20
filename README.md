@@ -80,11 +80,30 @@ This application is designed for rental car agency employees, such as:
     * **Delete:** Remove a customer record from the system (with appropriate authorization, if applicable).
 
 ## Data Model
-This project utilizes a [Data Structure] (e.g., relational database, JSON documents) to represent [Data Entity] data. The following fields are typically stored:
-   * [Field 1]: (Data type) - Description of the field's purpose in the business context.
-   * [Field 2]: (Data type) - Description of the field's purpose in the business context.
-   * ... (List all relevant fields)
+The application uses a relational database to store data entities such as cars, customers, and bookings. Each entity typically includes fields such as:
+   * Cars:
+     - car_id (Integer) - Unique identifier for each car.
+     - make (String) - Car brand (e.g., Toyota, Honda).
+     - model (String) - Specific model (e.g., Corolla, Civic).
+     - year (Integer) - Manufacturing year.
+     - rental_price_per_day (Float) - Cost per day for renting the car.
+     - availability_status (Boolean) - Indicates if the car is currently available for rental.
+
+   * Customers:
+     - customer_id (Integer) - Unique identifier for each customer.
+     - name (String) - Customer's full name.
+     - contact_info (String) - Phone number or email.
+     - driver_license (String) - Driver’s license number.
+
+   * Bookings:
+     - booking_id (Integer) - Unique identifier for each booking.
+     - car_id (Integer) - ID of the booked car.
+     - customer_id (Integer) - ID of the customer.
+     - start_date (Date) - Rental start date.
+     - end_date (Date) - Rental end date.
+     - status (String) - Current booking status (e.g., confirmed, canceled).
+
 
 ## Contributing
-We welcome contributions to this project! Please feel free to open a pull request, sent to [your_email] or submit an issue if you encounter any problems or have suggestions for improvements.
+Contributions are welcome! Feel free to open a pull request or submit an issue. For any questions, contact putriemma2010@gmail.com.
 
